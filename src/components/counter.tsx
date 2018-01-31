@@ -1,24 +1,24 @@
-import * as React from 'react';
+import * as React from 'react'
 
 interface Props {
 }
 interface State {
-  count: number;
+  count: number
 }
 
 export class Counter extends React.Component<Props, State> {
-  interval: number;
-  state = { count: 0 };
+  interval: number
+  state = { count: 0 }
 
   componentWillMount() {
     const incrementCounter = () => {
-      this.setState({ count: this.state.count + 1 });
-    };
-    this.interval = setInterval(incrementCounter, 1000);
+      this.setState({ count: this.state.count + 1 })
+    }
+    this.interval = setInterval(incrementCounter, 1000)
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    clearInterval(this.interval)
   }
 
   render() {
@@ -26,8 +26,8 @@ export class Counter extends React.Component<Props, State> {
       <div>
         <div>Counter: {this.state.count}</div>
       </div>
-    );
+    )
   }
 }
 
-export default Counter;
+export default Counter

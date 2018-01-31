@@ -1,14 +1,14 @@
-const path = require('path');
-const webpack = require('webpack');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const DashboardPlugin = require('webpack-dashboard/plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const PATHS = {
   root: path.resolve(__dirname, '..'),
   nodeModules: path.resolve(__dirname, '../node_modules'),
   src: path.resolve(__dirname, '../src'),
   dist: path.resolve(__dirname, '../dist'),
-};
+}
 
 const DEV_SERVER = {
   hot: true,
@@ -19,13 +19,13 @@ const DEV_SERVER = {
   // proxy: {
   //   '/api': 'http://localhost:3000'
   // },
-};
+}
 
 module.exports = (env = {}) => {
-  console.log({ env });
-  const isBuild = !!env.build;
-  const isDev = !env.build;
-  const isSourceMap = !!env.sourceMap || isDev;
+  console.log({ env })
+  const isBuild = !!env.build
+  const isDev = !env.build
+  const isSourceMap = !!env.sourceMap || isDev
 
   return {
     cache: true,
@@ -180,6 +180,6 @@ module.exports = (env = {}) => {
         }),
       ] : []),
     ]
-  };
+  }
 
-};
+}

@@ -4,14 +4,14 @@ window.matchMedia = window.matchMedia || function () {
     matches: false,
     addListener: function () { },
     removeListener: function () { },
-  };
-};
+  }
+}
 
 window.requestAnimationFrame = function (callback) {
-  setTimeout(callback);
-};
+  setTimeout(callback)
+}
 
 window.localStorage = {
   getItem: function () { },
   setItem: function () { },
-};
+}

@@ -1,4 +1,4 @@
-import { State } from './';
+import { State } from './'
 
 export const getReduxCounter =
-  (state: State) => state.reduxCounter;
+  (state: State) => state.reduxCounter
